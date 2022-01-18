@@ -3,16 +3,16 @@ import { WalletProvider } from "@solana/wallet-adapter-react";
 
 import {
   getPhantomWallet,
-  getLedgerWallet,
-  getMathWallet,
+  // getLedgerWallet,
+  // getMathWallet,
   getSolflareWallet,
   getSolletWallet,
-  getSolongWallet,
+  // getSolongWallet,
 } from '@solana/wallet-adapter-wallets'
 import { useMemo } from "react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 
-import('@solana/wallet-adapter-react-ui/styles.css' as any);
+import('@solana/wallet-adapter-react-ui/styles.css' as any) ;
 
 export function ClientWalletProvider(
   props: Omit<WalletProviderProps, "wallets">
@@ -28,9 +28,9 @@ export function ClientWalletProvider(
       //       "BOM5Cl7PXgE9Ylq1Z1tqzhpydY0RVr8k90QQ85N7AKI5QGSrr9iDC-3rvmy0K_hF0JfpLMiXoDhta68JwcxS1LQ",
       //   },
       // }),
-      getLedgerWallet(),
-      getSolongWallet(),
-      getMathWallet(),
+      // getLedgerWallet(),
+      // getSolongWallet(),
+      // getMathWallet(),
       getSolletWallet(),
     ],
     []
@@ -41,6 +41,8 @@ export function ClientWalletProvider(
       <WalletModalProvider {...props} />
     </WalletProvider>
   );
+
+
 }
 
 export default ClientWalletProvider;

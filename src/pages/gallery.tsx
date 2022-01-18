@@ -1,18 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { HomeView } from "../views";
+import { GalleryView } from "../views";
 
 const Home: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>Caw Caw!</title>
-        <meta
-          name="description"
-          content="This site will fly high 🦤"
-        />
+        <title>NFT Gallery!</title>
+        <meta name="description" content="This site will fly high 🦤" />
       </Head>
-      <HomeView />
+      <GalleryView />
     </div>
   );
 };
